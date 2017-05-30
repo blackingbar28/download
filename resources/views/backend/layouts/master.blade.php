@@ -1,32 +1,45 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="home" href="https://hdfilmedownloaden.de/" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="UTF-8">
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+        <link href="{!! asset('/bower/admin-lte/bootstrap/css/bootstrap.min.css') !!}" rel="stylesheet" type="text/css" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+        <link href="{!! asset('/bower/admin-lte/dist/css/AdminLTE.min.css') !!}" rel="stylesheet" type="text/css" />
+        <link href="{!! asset('/bower/admin-lte/dist/css/skins/skin-blue.min.css') !!}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('/css/backend/style.css') }}" rel="stylesheet" type="text/css">
+
         <title>Hd Filme Download | Download Filme &amp; Filme kostenlos downloaden</title>
-        <meta name="keywords" content="hd filme download,filme kostenlos downloaden,download filme,filme download,kostenlos filme downloaden,filme downloaden kostenlos,filme gratis downloaden,filme downloaden free" />
-        <meta name="description" content="Hdfilmedownloaden.de, Filme kostenlos downloaden neutest, regelmäßig aktualisieren.">
-
-        <meta name="dcterms.Identifier" content="https://hdfilmedownloaden.de" />
-        <meta name="dcterms.Format" content="text/html" />
-        <meta name="dcterms.Relation" content="Hdfilmedownloaden" />
-        <meta name="dcterms.Language" content="de" />
-        <meta name="dcterms.Publisher" content="Hdfilmedownloaden" />
-        <meta name="dcterms.Type" content="text/html" />
-        <meta name="dcterms.Coverage" content="https://hdfilmedownloaden.de/" />
-        <meta name="dcterms.Rights" content="Copyright &copy;2017 Hdfilmedownloaden." />
-        <meta name="dcterms.Title" content="Hd Filme Download | Download Filme & Filme kostenlos downloaden" />
-        <meta name="dcterms.Subject" content="Filme Download" />
-        <meta name="dcterms.Contributor" content="Hdfilmedownloaden" />
-        <meta name="dcterms.Description" content="Hdfilmedownloaden.de, Filme kostenlos downloaden neutest, regelmäßig aktualisieren." />
-
-
     </head>
-    <body>
+    <body class="skin-blue">
+        <div class="wrapper">
+            @include('backend.layouts.header')
+            @include('backend.layouts.sidebar')
 
+            <div class="content-wrapper">
+                <section class="content-header">
+                    <h1>
+                        <small>{!! $pageDescription or null !!}</small>
+                    </h1>
+                </section>
+
+                <section class="content">
+                    @yield('content')
+                </section>
+            </div>
+
+            @include('backend.layouts.footer')
+            <!-- jQuery 2.1.3 -->
+            <script src="{!! asset ('/bower/admin-lte/plugins/jQuery/jQuery-2.1.3.min.js') !!}"></script>
+            <!-- Bootstrap 3.3.2 JS -->
+            <script src="{!! asset ('/bower/admin-lte/bootstrap/js/bootstrap.min.js') !!}" type="text/javascript"></script>
+            <!-- AdminLTE App -->
+            <script src="{!! asset ('/bower/admin-lte/dist/js/app.min.js') !!}" type="text/javascript"></script>
+            <!-- Common js -->
+            <script src="{!! asset ('/js/common.js') !!}" type="text/javascript"></script>
+            <!-- Tinymce -->
+            <script src="{!! asset ('/backend/js/tinymce/tinymce.min.js') !!}"></script>
+        </div>
     </body>
 </html>
