@@ -9,3 +9,12 @@
   | contains the "web" middleware group. Now create something great!
   |
  */
+Route::auth();
+
+Route::group(['middleware' => 'auth:web'], function() {
+
+    //Darhboard
+    Route::get('/', 'DashBoardController@index')->name('admin.dashboard');
+
+    Route::resource('categories', 'CategoryController');
+});

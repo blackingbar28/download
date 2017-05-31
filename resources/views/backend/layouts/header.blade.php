@@ -20,5 +20,13 @@
                 </li>
             </ul>
         </div>
+
+        <li class="user-footer" style="list-style:none">
+            <div class="pull-right">
+                <a href="#" class="btn btn-default btn-flat" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                {!! Form::open(['route' => 'logout', 'method' => 'post', 'id' => 'logout-form'])  !!}
+                {!! Form::close() !!}
+            </div>
+        </li>
     </nav>
 </header>
