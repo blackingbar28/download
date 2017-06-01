@@ -17,4 +17,5 @@ Route::group(['middleware' => 'auth:web'], function() {
     Route::get('/', 'DashBoardController@index')->name('admin.dashboard');
 
     Route::resource('categories', 'CategoryController');
+    Route::resource('articles', 'ArticleController');
 });
