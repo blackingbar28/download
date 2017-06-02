@@ -18,4 +18,5 @@ Route::group(['middleware' => 'auth:web'], function() {
 
     Route::resource('categories', 'CategoryController');
     Route::resource('articles', 'ArticleController');
+    Route::resource('metas', 'MetaController');
 });
