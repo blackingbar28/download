@@ -16,5 +16,5 @@ class Meta extends Model
      * The attribute that are mass assignable
      * @var array
      */
-    protected $fillable = ['article_id', 'link_id', 'url'];
+    protected $fillable = ['article_id', 'name', 'link_id', 'url'];
 }

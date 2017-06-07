@@ -1,7 +1,7 @@
 <!-- Title English Field -->
 <div class="form-group col-sm-offset-3 col-sm-6 has-feedback {!! $errors->has('article_id') ? ' has-error' : '' !!} ">
     {!! Form::label('article_id', 'article_id') !!}
-    {!! Form::select('article_id', $articles, null, ['class' => 'form-control']) !!}
+    {!! Form::select('article_id', $articles, isset($meta) ? $meta->article_id : null, ['class' => 'form-control']) !!}
 
     @if ($errors->has('article_id'))
         <span class="help-block">

@@ -26,10 +26,11 @@ class MetaController extends Controller
     public function index()
     {
         $metas = $this->meta->paginate(10, [
-            'article_id',
-            'link_id',
-            'url',
-            'name'
+            'metas.id',
+            'metas.article_id',
+            'metas.link_id',
+            'metas.url',
+            'metas.name'
         ]);
 
         return view('backend.meta.index', compact('metas'));
@@ -46,7 +47,29 @@ class MetaController extends Controller
     public function store(Request $request)
     {
         $data = $request->only('article_id', 'link_id', 'name', 'url');
-        dd($data);
+
+        $this->meta->create($data);
+
+        flash('Create success', 'success');
+
+        return redirect()->route('metas.index');
     }
 
+    public function edit($id)
+    {
+        $links = $this->link->all(['id', 'name'])->pluck('name', 'id');
+        $articles = $this->article->all(['id', 'title_en'])->pluck('title_en', 'id');
+        $meta = $this->meta->find($id, ['id', 'article_id', 'link_id', 'name', 'url']);
+
+        return view('backend.meta.edit', compact('meta', 'links', 'articles'));
+    }
+
+    public function destroy($id)
+    {
+        $this->meta->delete($id);
+
+        flash('Delete success', 'success');
+
+        return redirect()->route('metas.index');
+    }
 }

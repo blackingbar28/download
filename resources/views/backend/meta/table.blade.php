@@ -16,9 +16,9 @@
                 <td class="text-center">{{ $meta->url }}</td>
                 <td class="text-center">{{ $meta->name }}</td>
                 <td class="text-center">
-                    <a href="{!! route('metas.show', [$article->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
-                    <a href="{!! route('metas.edit', [$article->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
-                    {!! Form::open(['route' => ['metas.destroy', $article->id], 'method' => 'delete', 'style' => 'display: inline-block']) !!}
+                    <a href="{!! route('metas.show', [$meta->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
+                    <a href="{!! route('metas.edit', [$meta->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
+                    {!! Form::open(['route' => ['metas.destroy', $meta->id], 'method' => 'delete', 'style' => 'display: inline-block']) !!}
                     {!! Form::submit('delete', ['class' => 'glyphicon glyphicon-edit']) !!}
                     {!! Form::close() !!}
                 </td>
