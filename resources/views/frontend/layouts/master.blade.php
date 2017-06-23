@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="home" href="https://hdfilmedownloaden.de/" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Hd Filme Downloaden | Download Filme &amp; Filme kostenlos downloaden</title>
+        @yield('title')
         <meta name="keywords" content="hd filme download,filme kostenlos downloaden,download filme,filme download,kostenlos filme downloaden,filme downloaden kostenlos,filme gratis downloaden,filme downloaden free" />
         <meta name="description" content="Hdfilmedownloaden.de, Filme kostenlos downloaden neutest, regelmäßig aktualisieren.">
 
@@ -24,12 +24,27 @@
         <meta name="dcterms.Contributor" content="Hdfilmedownloaden" />
         <meta name="dcterms.Description" content="Hdfilmedownloaden.de, Filme kostenlos downloaden neutest, regelmäßig aktualisieren." />
 
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+        <link href="{!! asset('/css/normalize.css') !!}" rel="stylesheet" type="text/css" />
         <link href="{!! asset('/css/frontend/style.css') !!}" rel="stylesheet" type="text/css" />
         <link href="{!! asset('/bower/admin-lte/bootstrap/css/bootstrap.css') !!}" rel="stylesheet" type="text/css" />
     </head>
     <body>
         <div class="site-wrap">
             @include('frontend.layouts.header')
+
+            <div id="page-content">
+                <div class="container">
+                    <div class="row margin-top-30">
+                        <div class="col-sm-3">
+                            @include('frontend.layouts.nav')
+                        </div>
+                        <div class="col-sm-9 download-list">
+                            @section('content')
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </body>
