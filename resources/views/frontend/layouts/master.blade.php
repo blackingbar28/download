@@ -25,9 +25,10 @@
         <meta name="dcterms.Description" content="Hdfilmedownloaden.de, Filme kostenlos downloaden neutest, regelmäßig aktualisieren." />
 
         <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link href="{!! asset('/bower/admin-lte/bootstrap/css/bootstrap.css') !!}" rel="stylesheet" type="text/css" />
         <link href="{!! asset('/css/normalize.css') !!}" rel="stylesheet" type="text/css" />
         <link href="{!! asset('/css/frontend/style.css') !!}" rel="stylesheet" type="text/css" />
-        <link href="{!! asset('/bower/admin-lte/bootstrap/css/bootstrap.css') !!}" rel="stylesheet" type="text/css" />
     </head>
     <body>
         <div class="site-wrap">
@@ -35,12 +36,14 @@
 
             <div id="page-content">
                 <div class="container">
+                    @include('frontend.layouts.search')
+
                     <div class="row margin-top-30">
                         <div class="col-sm-3">
                             @include('frontend.layouts.nav')
                         </div>
                         <div class="col-sm-9 download-list">
-                            @section('content')
+                            @yield('content')
                         </div>
                     </div>
                 </div>

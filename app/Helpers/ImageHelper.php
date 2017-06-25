@@ -203,10 +203,10 @@ class ImageHelper
 
         $filePath = sprintf($format, $this->config[$type]['path'], $id, $size, $fileName);
         $rootPath = sprintf('%s%s/%s', $this->config[$type]['path'], $id, $fileName);
-
         $imgPath = $this->config['no_image'];
+
         if (!empty($fileName)) {
-            if (\File::exists($filePath)) {
+            if (\Storage::disk('local')->exists($filePath)) {
                 $imgPath = $filePath;
             } elseif (in_array($size, $this->config[$type]['resize'])) {
                 list($width, $height) = explode('x', $size);

@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6, body {
 .title-header h1 {
     font-family: 'Amatic SC', cursive;
     color: #fff;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 300;
     text-transform: uppercase;
 }
@@ -29,6 +29,9 @@ h1, h2, h3, h4, h5, h6, body {
 .no-margin {
     margin: 0 !important;
 }
+.margin-top-15 {
+    margin-top: 15px;
+}
 .margin-top-30 {
     margin-top: 30px;
 }
@@ -37,4 +40,92 @@ h1, h2, h3, h4, h5, h6, body {
 }
 .download-list {
     border-left: 1px solid #DCDCDC;
+}
+
+/**
+HOme Page
+ */
+.download-list {
+    border-left: 1px solid #DCDCDC;
+}
+.section-inverse {
+    background-color: #1f8fc1;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.section-inverse h2 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 22px;
+}
+.row-data-md {
+    margin-top: 30px;
+}
+.img-film {
+    height: 152px;
+    width: 290px;
+}
+.span-new {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 1;
+    vertical-align: baseline;
+    white-space: nowrap;
+    text-align: center;
+    background-color: #999;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+.badge-squared {
+    border-radius: 2px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+.badge-new {
+    background-color: #f6a926;
+}
+.span-title {
+    font-size: 12px;
+    margin: 10px 0;
+}
+.caption .star {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+/* Search button */
+#custom-search-input{
+    padding: 3px;
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+}
+
+#custom-search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input .glyphicon-search{
+    font-size: 23px;
 }

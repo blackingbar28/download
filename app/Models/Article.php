@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Meta;
 
 class Article extends Model
 {
@@ -17,4 +18,9 @@ class Article extends Model
      * @var array
      */
     protected $fillable = ['category_id', 'link_id', 'title_en', 'title_de', 'description', 'content_en', 'content_de', 'year', 'image', 'star', 'slug'];
+
+    public function metas()
+    {
+        return $this->hasMany(Meta::class, 'article_id', 'id');
+    }
 }

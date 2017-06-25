@@ -76,6 +76,9 @@ class ArticleController extends Controller
     }
     public function destroy($id)
     {
+        $article = $this->article->find($id);
+        ImageHelper::deleteImage($article->image, 'banner');
+
         $this->article->delete($id);
 
         flash('Delete success', 'success');
